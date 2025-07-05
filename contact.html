@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Confluence Creatives</title>
+    <meta
+      name="description"
+      content="Get in touch with AgencyCreative. Let's discuss your project or say hello."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="main-header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo">CC.</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active-page">Contact</a>
+            </li>
+          </ul>
+          <button class="hamburger" aria-label="Open navigation menu">
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-content">
+            <h1>Let's build something great.</h1>
+            <p>
+              Have a project in mind or just want to say hello? We'd love to
+              hear from you.
+            </p>
+          </div>
+        </section>
+
+        <section class="contact-page-section">
+          <div class="contact-grid-container">
+            <div class="contact-form-wrapper">
+              <h2>Send Us a Message</h2>
+              <form
+                id="contact-form"
+                action="https://formspree.io/f/your_unique_code"
+                method="POST"
+                class="contact-form"
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="What should we call you?"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your best email address"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your project..."
+                  rows="6"
+                  required
+                ></textarea>
+                <button type="submit" class="cta-button">Submit Form</button>
+              </form>
+              <div id="form-status"></div>
+            </div>
+            <div class="contact-details-panel">
+              <h3>Contact Details</h3>
+              <p>Reach out directly or schedule a call. We're here to help.</p>
+              <hr />
+              <ul class="contact-info-list">
+                <li>
+                  <i class="fas fa-envelope"></i
+                  ><a href="mailto:hello@agencycreative.com"
+                    >hello@agencycreative.com</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i
+                  ><span>+91 98765 43210 (Mon-Fri)</span>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i
+                  ><span>Pune, Maharashtra, India</span>
+                </li>
+              </ul>
+              <hr />
+              <h4>Business Hours</h4>
+              <p>Monday – Friday: 10:00 AM – 6:00 PM (IST)</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="map-section">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.7093297548!2d73.7228780519092!3d18.52456486044754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1719472382148!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-main">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <a href="index.html" class="footer-logo">CC.</a>
+              <p>
+                Ideas that resonate. Creative digital strategies that capture
+                attention and refuse to let go.
+              </p>
+            </div>
+
+            <div class="footer-column">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <ul>
+                <li>
+                  <a href="mailto:confluence.creatives1001@gmail.com"
+                    >confluence.creatives1001@gmail.com</a
+                  >
+                </li>
+                <li>Pune, India</li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Follow</h4>
+              <div class="footer-socials">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/confluence.creatives/"
+                  aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Confluence Creatives. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

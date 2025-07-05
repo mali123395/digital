@@ -1,0 +1,1056 @@
+/* =================================
+   SIMPLE & CREATIVE STYLESHEET V7 (Polished)
+   =================================
+*/
+
+/* --- 1. Variables and Global Styles --- */
+:root {
+  --bg-color: #fdf8f0;
+  --text-color: #403d39;
+  --heading-color: #252422;
+  --accent-color: #c97b63;
+  --accent-hover: #b1664c;
+  --border-color: #e3dcd2;
+  --section-padding: 6rem 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+/* New: Page load animation */
+.site-wrapper {
+  animation: fadeIn 0.7s ease-in-out;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--heading-color);
+  font-weight: 700;
+}
+main,
+.main-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+}
+
+/* --- 2. Header and Navigation --- */
+.main-header {
+  padding: 1.5rem 2rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: var(--heading-color);
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+.nav-item {
+  margin-left: 3rem;
+}
+.nav-link {
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link:hover {
+  color: var(--accent-color);
+}
+/* Updated: Added underline effect for active page */
+.nav-link.active-page {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+.nav-link.active-page::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+/* --- 3. Buttons --- */
+.cta-button,
+.secondary-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cta-button {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+}
+.cta-button:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+.secondary-button {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.secondary-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* --- 4. Home Page Sections --- */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.featured-services {
+  padding: var(--section-padding);
+  text-align: center;
+  background-color: #fff;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem auto;
+}
+.service-promo-card {
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+} /* Updated: Smoother transition */
+.service-promo-card:hover {
+  transform: translateY(-8px);
+}
+.service-promo-card i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+.service-promo-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial {
+  padding: var(--section-padding);
+}
+.testimonial-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial-icon {
+  font-size: 4rem;
+  color: var(--border-color);
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.testimonial-text {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.testimonial-author {
+  font-style: italic;
+  color: #8a7c6a;
+}
+
+/* UPDATED: Call to Action Section as a visible white box */
+.cta-section {
+  padding: 4rem 2rem; /* Adjusted padding for a box look */
+  background: #fff; /* This makes it a white box */
+  text-align: center;
+  max-width: 900px; /* Constrain the width */
+  margin: 6rem auto; /* Center the box with space above and below */
+  border-radius: 15px; /* Softer corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* The shadow that makes it visible */
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 2rem;
+}
+
+/* --- 5. Interior Page Styles --- */
+.page-content {
+  padding: 4rem 0 6rem 0;
+  border-top: 1px solid var(--border-color);
+}
+.page-title,
+.section-subtitle {
+  text-align: center;
+}
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+.page-subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+}
+
+.about-intro {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.values-section,
+.team-section {
+  padding-top: 5rem;
+}
+.section-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.value-card {
+  text-align: center;
+}
+.value-card i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team-member h4 {
+  font-size: 1.25rem;
+}
+
+/* =================================
+   NEW ABOUT PAGE STYLES
+   =================================
+*/
+
+/* About Page: Hero Section */
+.page-hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+/* About Page: Our Story Section */
+.our-story {
+  padding: var(--section-padding);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.story-text p {
+  margin-bottom: 1.5rem;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* About Page: Our Approach Section */
+.our-approach {
+  padding: var(--section-padding);
+  background-color: #fff;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.approach-list {
+  max-width: 900px;
+  margin: 0 auto;
+  counter-reset: approach-counter; /* Initializes a counter */
+}
+
+.approach-item {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+  position: relative;
+}
+
+/* Add space between items */
+.approach-item + .approach-item {
+  margin-top: 4rem;
+}
+
+.approach-number {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.approach-text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* About Page: Team Section */
+.team-section {
+  padding: var(--section-padding);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member-image {
+  margin-bottom: 1.5rem;
+}
+
+.team-member-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.team-member-info h4 {
+  font-size: 1.75rem;
+}
+
+.team-member-info .team-role {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* =================================
+   NEW SERVICES PAGE STYLES
+   =================================
+*/
+
+.services-page-section {
+  padding: var(--section-padding);
+}
+
+.services-grid {
+  display: grid;
+  /* Create a 2-column grid, making them equal width */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem; /* Space between the cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-card-icon {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.service-card hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-card h4 {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.service-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-card ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.service-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+/* Updated: Added subtle animation to service list items */
+.services-list.expanded .service-item {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 3rem;
+  animation: slideUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+.services-list.expanded .service-item:last-child {
+  border-bottom: none;
+}
+.service-text ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+.service-text li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.service-text li::before {
+  content: "✓";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+}
+/* New: Staggered animation delay */
+.service-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.service-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.service-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.contact-info-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.process-list {
+  list-style: none;
+  padding-left: 0;
+}
+.process-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.process-number {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+} /* Updated: Added transition */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(201, 123, 99, 0.2);
+} /* Updated: Softer focus ring */
+.contact-form button {
+  margin-top: 0;
+}
+
+/* --- 6. Animations & Mobile --- */
+/* New: Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 1px solid var(--border-color);
+  color: #9c8f7e;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+} /* Updated: Hamburger is a button now */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--heading-color);
+  transition: all 0.3s ease-in-out;
+}
+/* =================================
+   NEW CONTACT PAGE STYLES
+   =================================
+*/
+
+.contact-page-section {
+  padding: var(--section-padding);
+}
+
+.contact-grid-container {
+  display: grid;
+  /* Create a 2-column grid */
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Right Info Panel */
+.contact-details-panel {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  position: sticky; /* Makes the panel "stick" as you scroll past */
+  top: 120px; /* Adjust based on your navbar height */
+}
+
+.contact-details-panel h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-details-panel p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-info-list li i {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  width: 20px; /* Ensures icons are aligned */
+  text-align: center;
+}
+
+.contact-details-panel h4 {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Map Section with Live Iframe */
+.map-section {
+  padding-bottom: 6rem;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+  border: none; /* Remove default iframe border */
+  border-radius: 15px; /* Match our site's border radius */
+}
+/* =================================
+   DEFINITIVE FOOTER STYLES (Light Version)
+   =================================
+*/
+
+footer {
+  /* Set to the main page background color for contrast with the white CTA box */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-column .footer-logo {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: var(--heading-color);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footer-column p {
+  line-height: 1.7;
+  max-width: 250px;
+  color: var(--text-color); /* Reverted to dark text */
+  opacity: 1;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color); /* Reverted to dark heading */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul a {
+  color: var(--text-color); /* Reverted to dark link color */
+  transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+  color: var(--accent-color);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 3.5rem;
+}
+
+.footer-socials a {
+  color: var(--text-color); /* Reverted to dark icon color */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9c8f7e; /* Reverted to muted dark text */
+}
+/* =================================
+   FORM STATUS MESSAGE STYLES
+   =================================
+*/
+
+#form-status {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  display: none; /* Hidden by default */
+}
+
+#form-status.success {
+  display: block;
+  background-color: #e6f9f0; /* A soft green */
+  color: #0d6a3c;
+  border: 1px solid #a3e6c8;
+}
+
+#form-status.error {
+  display: block;
+  background-color: #fdeaea; /* A soft red */
+  color: #a31c1c;
+  border: 1px solid #f5b7b7;
+}
+/* In style.css, find this media query and add the rules inside */
+
+@media (max-width: 992px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  /* ADD THIS NEW BLOCK FOR THE CONTACT PAGE */
+  .contact-grid-container {
+    grid-template-columns: 1fr; /* This is the key: stacks the grid into one column */
+    gap: 3rem; /* We can reduce the gap for a vertical layout */
+  }
+
+  .contact-details-panel {
+    position: static; /* This is important: it stops the panel from being sticky on mobile */
+  }
+  /* END OF NEW BLOCK */
+}
+@media (max-width: 768px) {
+  main,
+  .main-header {
+    padding: 0 1rem;
+  }
+  .main-header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: center;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .nav-menu.active {
+    left: 0;
+    visibility: visible;
+  }
+  .nav-item {
+    margin: 2rem 0;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 11;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .service-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack columns on top of each other */
+    text-align: center;
+  }
+
+  .footer-column p {
+    margin: 0 auto; /* Center the paragraph text */
+  }
+
+  .footer-socials {
+    justify-content: center; /* Center the social icons */
+  }
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack cards into a single column */
+  }
+}
+/*
+@media (max-width: 992px) {
+  .page-title,
+  .section-subtitle {
+    font-size: 2.5rem;
+  }
+  .hero h1,
+  .page-hero h1 {
+    font-size: 3rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-details-panel {
+    position: static;
+  }
+}
+
+/* For mobile phones 
+@media (max-width: 768px) {
+  main,
+  .main-header {
+    padding: 0 1.5rem;
+  }
+  .main-header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: center;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .nav-menu.active {
+    left: 0;
+    visibility: visible;
+  }
+  .nav-item {
+    margin: 2rem 0;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 11;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .footer-column {
+    text-align: center;
+  }
+  .footer-column-brand,
+  .footer-column-brand p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* --- Keyframe Animations --- 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+*/
